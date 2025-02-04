@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defere src = ""></script>
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-   <div id ="container">
-    <div id="title">
-        Welcome to a Game of Rock Paper Scissors
+    <div id="container">
+        <div id="title">
+            <h1>Rock Paper Scissors</h1>
+            <p>Choose your move and see if you can beat the computer!</p>
+        </div>
+        <div id="game">
+            <div id="choices">
+                <button id="rock" class="choice-btn">✊</button>
+                <button id="paper" class="choice-btn">✋</button>
+                <button id="scissors" class="choice-btn">✌️</button>
+            </div>
+            <div id="results">
+                <div id="round-result" class="result-text"></div>
+                <div id="score" class="result-text"></div>
+                <div id="final-result" class="result-text"></div>
+            </div>
+        </div>
     </div>
-    <div id="body">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="Scissors">Scissors</button>
-    </div>
-   </div>
+    <script src="script.js"></script>
 </body>
 </html>
