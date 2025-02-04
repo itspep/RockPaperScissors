@@ -90,3 +90,23 @@ body {
 #round-result, #score, #final-result {
     animation: fadeIn 0.5s ease-in-out;
 }
+
+/* Play Again Button */
+.play-again-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: none; /* Hidden by default */
+}
+
+.play-again-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}

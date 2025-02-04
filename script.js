@@ -4,6 +4,7 @@ const scissors = document.querySelector('#scissors');
 const roundResult = document.querySelector('#round-result');
 const score = document.querySelector('#score');
 const finalResult = document.querySelector('#final-result');
+const playAgainBtn = document.querySelector('#play-again');
 
 let pcScore = 0;
 let userScore = 0;
@@ -44,12 +45,25 @@ function checkGameEnd() {
         } else {
             finalResult.textContent = "🤝 It's a tie!";
         }
+        playAgainBtn.style.display = "block"; // Show the "Play Again" button
     }
+}
+
+function resetGame() {
+    pcScore = 0;
+    userScore = 0;
+    roundsPlayed = 0;
+    roundResult.textContent = "";
+    score.textContent = "";
+    finalResult.textContent = "";
+    playAgainBtn.style.display = "none"; // Hide the "Play Again" button
 }
 
 rock.addEventListener('click', () => handleClick('✊'));
 paper.addEventListener('click', () => handleClick('✋'));
 scissors.addEventListener('click', () => handleClick('✌️'));
+
+playAgainBtn.addEventListener('click', resetGame);
 
 function handleClick(humanChoice) {
     if (roundsPlayed >= totalRounds) return;
